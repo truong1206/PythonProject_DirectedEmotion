@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #video-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        #video {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #browser-btn {
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Emotion Detection</title>
+</head>
+<body>
+    <h1>Emotion Detection</h1>
+    <div id="video-container">
+        <img id="video" src="{{ url_for('video_feed') }}">
+    </div>
+    <br>
+    <button id="browser-btn" onclick="window.location.href='/browser'">Open Browser</button>
+</body>
+</html>
